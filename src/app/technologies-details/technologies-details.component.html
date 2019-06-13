@@ -1,0 +1,19 @@
+<h2>Technology details</h2>
+
+<div *ngIf="tech">
+  <h3>{{ tech.name }}</h3>
+  <h4>Usability: {{ tech.usability  }}</h4>
+  <h4>Performance: {{ tech.performance  }}</h4>
+  <h4>Compatibility: {{ tech.compatibility  }}</h4>
+  <h4>Rating: {{tech.rating}}/10</h4>
+  <p>{{ tech.description }}</p>
+<label>
+Rate:<br>
+0<input type="range" name="range" ng-model="value" min="0"  max="10">10
+</label>
+<p>
+<button (click)="rate()">
+    Rate!
+  </button>
+</p>
+</div>

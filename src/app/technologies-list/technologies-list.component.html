@@ -1,0 +1,11 @@
+<h2>Technologies</h2>
+<div *ngFor="let tech of technologies; index as techId">
+    <h3>
+     <a [title]="tech.name + ' details'" [routerLink]="['/tech', techId]">
+      {{ tech.name }}
+    </a> ({{tech.rating}}/10)
+  </h3>
+<p *ngIf="tech.description">
+    {{ tech.description }}
+  </p>
+</div>
